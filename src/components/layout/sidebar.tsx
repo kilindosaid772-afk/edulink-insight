@@ -101,19 +101,10 @@ export function AppSidebar() {
             <SidebarMenu>
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
                     <NavLink
                       to={item.url}
-                      className={({ isActive: navIsActive }) =>
-                        cn(
-                          "flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200",
-                          "hover:bg-accent/50 hover:text-accent-foreground",
-                          navIsActive || isActive(item.url)
-                            ? "bg-primary text-primary-foreground shadow-sm font-medium"
-                            : "text-muted-foreground hover:text-foreground",
-                          !open && "justify-center"
-                        )
-                      }
+                      className="flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 no-underline"
                     >
                       <item.icon className="h-5 w-5 flex-shrink-0" />
                       {open && <span className="truncate">{item.title}</span>}

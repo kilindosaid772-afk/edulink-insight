@@ -46,19 +46,19 @@ export function Header() {
               <DropdownMenuContent align="end" className="w-80">
                 <DropdownMenuLabel>Notifications</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => console.log('Quiz notifications clicked')}>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">New quiz submissions</p>
                     <p className="text-xs text-muted-foreground">5 students completed Math Quiz #3</p>
                   </div>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => console.log('Mentor call notification clicked')}>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">Mentor call scheduled</p>
                     <p className="text-xs text-muted-foreground">Call with Sarah Johnson at 2:00 PM</p>
                   </div>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={() => console.log('Airtime notification clicked')}>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">Low airtime balance</p>
                     <p className="text-xs text-muted-foreground">Student ID #1234 needs airtime rewards</p>
@@ -81,10 +81,16 @@ export function Header() {
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>Admin Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Settings</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => console.log('Profile clicked')}>
+                  Profile
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => console.log('Settings clicked')}>
+                  Settings
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Logout</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => window.location.href = '/login'}>
+                  Logout
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

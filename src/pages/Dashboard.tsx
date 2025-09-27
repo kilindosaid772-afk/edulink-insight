@@ -248,19 +248,35 @@ export default function Dashboard() {
             <CardDescription>Frequently used administrative tasks</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => window.location.href = '/students'}
+            >
               <Users className="mr-2 h-4 w-4" />
               Add New Student
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => window.location.href = '/quizzes'}
+            >
               <ClipboardCheck className="mr-2 h-4 w-4" />
               Create Quiz
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => window.location.href = '/rewards'}
+            >
               <Gift className="mr-2 h-4 w-4" />
               Distribute Rewards
             </Button>
-            <Button className="w-full justify-start" variant="outline">
+            <Button 
+              className="w-full justify-start" 
+              variant="outline"
+              onClick={() => console.log('Schedule lesson clicked')}
+            >
               <BookOpen className="mr-2 h-4 w-4" />
               Schedule Lesson
             </Button>

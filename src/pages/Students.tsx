@@ -128,11 +128,18 @@ export default function Students() {
           <p className="text-muted-foreground">Manage and monitor student progress</p>
         </div>
         <div className="flex gap-2">
-          <Button variant="outline" className="border-border/50">
+          <Button 
+            variant="outline" 
+            className="border-border/50"
+            onClick={() => console.log('Export clicked')}
+          >
             <Download className="mr-2 h-4 w-4" />
             Export
           </Button>
-          <Button className="bg-gradient-primary text-primary-foreground">
+          <Button 
+            className="bg-gradient-primary text-primary-foreground"
+            onClick={() => console.log('Add student clicked')}
+          >
             <UserPlus className="mr-2 h-4 w-4" />
             Add Student
           </Button>
@@ -265,10 +272,18 @@ export default function Students() {
                     </TableCell>
                     <TableCell>
                       <div className="flex gap-1">
-                        <Button variant="ghost" size="sm">
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          onClick={() => console.log('View student:', student.id)}
+                        >
                           <Eye className="h-4 w-4" />
                         </Button>
-                        <Button variant="ghost" size="sm">
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          onClick={() => console.log('Edit student:', student.id)}
+                        >
                           <Edit className="h-4 w-4" />
                         </Button>
                       </div>
